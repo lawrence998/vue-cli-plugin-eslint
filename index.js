@@ -1,35 +1,46 @@
-const lint = require('./lint');
-const optionsForApi = require('./eslintOptions');
+const lint = require ('./lint');
+const optionsForApi = require ('./eslintOptions');
 
-module.exports = (api, { lintOnSave }) => {
+module.exports = (api, option) => {
+  const { lintOnSave } = option;
+
   if (lintOnSave) {
-    const options = optionsForApi(api);
-    api.chainWebpack((webpackConfig) => {
+    const allWarnings = lintOnSave === true || lintOnSave === 'warining';
+    const allErrors = lintOnSave === 'error';
+    const options = optionsForApi (api);
+
+    api.chainWebpack ((webpackConfig) => {
       /* eslint-disable indent */
-      webpackConfig.module
-        .rule('eslint')
-          .test(/\.(vue|(j|t)sx?)$/)
-          .pre()
-          .include
-            .add(api.resolve('src'))
-            .add(api.resolve('test'))
-            .end()
-          .use('eslint-loader')
-            .loader('eslint-loader')
-            .options(Object.assign(options));
-      /* eslint-enable indent */
-    });
+      webpackConfig.module.rule ('eslint')
+          .test (/\.(vue|(j|t)sx?)$/)
+          .pre ()
+          .exclude
+          .add (/node_modules/)
+          .end ()
+          .use ('eslint-loader')
+          .loader (require.resolve ('eslint-loader'))
+          .options (Object.assign (options, {
+            emitWarning: allWarnings,
+            emitError: allErrors
+          }));
+        /* eslint-enable indent */
+      });
   }
 
-  api.registerCommand('lint', {
+  api.registerCommand ('lint', {
     description: 'lint and fix source files',
     usage: 'vue-cli-service lint [options] [...files]',
     options: {
       '--format [formatter]': 'specify formatter (default: codeframe)',
-      '--no-fix': 'do not fix errors',
+      '--no-fix': 'do not fix errors or warnings',
+      '--no-fix-warnings': 'fix errors, but do not fix warnings',
+      '--max-errors [limit]':
+          'specify number of errors to make build failed (default: 0)',
+      '--max-warnings [limit]':
+          'specify number of warnings to make build failed (default: Infinity)'
     },
-    details: 'For more options, see https://eslint.org/docs/user-guide/command-line-interface#options',
+    details: 'For more options, see https://eslint.org/docs/user-guide/command-line-interface#options'
   }, (args) => {
-    lint(args, api);
+    lint (args, api);
   });
 };

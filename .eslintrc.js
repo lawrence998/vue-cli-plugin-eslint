@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   env: {
-    es6: true,
+    es6: true
   },
-  extends: ['@winner-fed/win'],
+  extends: ['@winner-fed/win']
 };
