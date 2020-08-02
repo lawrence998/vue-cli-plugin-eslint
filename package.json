@@ -18,9 +18,11 @@
   "keywords": [
     "vue",
     "cli",
-    "eslint"
+    "eslint",
+    "win",
+    "winner"
   ],
-  "author": "windraxb",
+  "author": "winner-fed",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cloud-templates/vue-cli-plugin-eslint/issues"
