@@ -1,6 +1,6 @@
 {
   "name": "@winner-fed/vue-cli-plugin-eslint",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "eslint plugin for vue-cli",
   "main": "index.js",
   "scripts": {
