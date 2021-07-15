@@ -2,11 +2,10 @@ const lint = require('../lint');
 const stringifyJS = require('javascript-stringify');
 const path = require('path');
 const { hasESLintConfig } = require('../utils');
-const chalk = require('chalk');
 
 module.exports = (api, { overwriteConfig, config, lintOn = [] }) => {
   if (overwriteConfig === 'abort') {
-    api.exitLog(chalk`{yellow Plugin setup successfully cancelled}`, 'warn');
+    api.exitLog(`Plugin setup successfully cancelled`, 'warn');
     return;
   }
 
