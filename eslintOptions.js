@@ -21,8 +21,8 @@ module.exports = (api) => {
     };
   }
 
-  options.extends.push('@winner-fed/win');
-  options.extends.push('@winner-fed/win/vue');
+  options.extends.push('@lawrence_ch/win');
+  options.extends.push('@lawrence_ch/win/vue');
 
   options.parserOptions = {
     sourceType: 'module',

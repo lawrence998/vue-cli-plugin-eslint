@@ -30,9 +30,9 @@ const questions = [
     choices: [
       new inquirer.Separator(),
       {
-        name: '@winner-fed',
-        value: '@winner-fed',
-        short: '@winner-fed',
+        name: '@lawrence_ch',
+        value: '@lawrence_ch',
+        short: '@lawrence_ch',
       }
     ]
   }, {

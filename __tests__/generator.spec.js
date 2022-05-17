@@ -12,7 +12,7 @@ test('base', async () => {
 
 test('airbnb', async () => {
   const { pkg } = await generateWithPlugin({
-    id: '@winner-fed/vue-cli-plugin-stylelint',
+    id: '@lawrence_ch/vue-cli-plugin-stylelint',
     apply: require('../generator'),
     options: {
       config: '@vue/eslint-config-airbnb',
@@ -25,7 +25,7 @@ test('airbnb', async () => {
 
 test('standard', async () => {
   const { pkg } = await generateWithPlugin({
-    id: '@winner-fed/vue-cli-plugin-stylelint',
+    id: '@lawrence_ch/vue-cli-plugin-stylelint',
     apply: require('../generator'),
     options: {
       config: '@vue/eslint-config-standard',
@@ -38,7 +38,7 @@ test('standard', async () => {
 
 test('prettier', async () => {
   const { pkg } = await generateWithPlugin({
-    id: '@winner-fed/vue-cli-plugin-stylelint',
+    id: '@lawrence_ch/vue-cli-plugin-stylelint',
     apply: require('../generator'),
     options: {
       config: '@vue/eslint-config-prettier',
@@ -49,16 +49,16 @@ test('prettier', async () => {
   expect(pkg.devDependencies).toHaveProperty('@vue/eslint-config-prettier');
 });
 
-test ('winner-fed', async () => {
+test ('lawrence_ch', async () => {
   const { pkg } = await generateWithPlugin({
-    id: '@winner-fed/vue-cli-plugin-eslint',
+    id: '@lawrence_ch/vue-cli-plugin-eslint',
     apply: require ('generator'),
     options: {
-      config: '@winner-fed/eslint-config-win'
+      config: '@lawrence_ch/eslint-config-win'
     }
   });
   expect (pkg.scripts['lint']).toBeTruthy ();
-  expect (pkg.devDependencies).toHaveProperty ('@winner-fed/eslint-config-win');
+  expect (pkg.devDependencies).toHaveProperty ('@lawrence_ch/eslint-config-win');
 })
 
 test('typescript', async () => {

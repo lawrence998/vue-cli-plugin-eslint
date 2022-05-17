@@ -1,5 +1,5 @@
 {
-  "name": "@winner-fed/vue-cli-plugin-eslint",
+  "name": "@lawrence_ch/vue-cli-plugin-eslint",
   "version": "1.0.4",
   "description": "eslint plugin for vue-cli",
   "main": "index.js",
@@ -13,21 +13,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cloud-templates/vue-cli-plugin-eslint.git"
+    "url": "git+https://github.com/lawrence998/vue-cli-plugin-eslint.git"
   },
   "keywords": [
     "vue",
     "cli",
     "eslint",
     "win",
-    "winner"
+    "lawrence_ch"
   ],
-  "author": "winner-fed",
+  "author": "lawrence_ch",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cloud-templates/vue-cli-plugin-eslint/issues"
+    "url": "https://github.com/lawrence998/vue-cli-plugin-eslint/issues"
   },
-  "homepage": "https://github.com/cloud-templates/vue-cli-plugin-eslint#readme",
+  "homepage": "https://github.com/lawrence998/vue-cli-plugin-eslint#readme",
   "dependencies": {
     "eslint-loader": "^4.0.2",
     "inquirer": "^7.3.2",
@@ -35,7 +35,7 @@
     "micromatch": "^4.0.2"
   },
   "devDependencies": {
-    "@winner-fed/eslint-config-win": "^1.0.2",
+    "@lawrence_ch/eslint-config-win": "^1.0.1",
     "cross-env": "^5.2.0",
     "jest": "^22.4.3"
   },

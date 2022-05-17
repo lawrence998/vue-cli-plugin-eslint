@@ -22,15 +22,15 @@ module.exports = (api, { overwriteConfig, config, lintOn = [] }) => {
 
   const configs = [];
   switch (config) {
-    case '@winner-fed':
-    case 'winner-fed':
-    case '@winner-fed/eslint-config-win':
+    case '@lawrence_ch':
+    case 'lawrence_ch':
+    case '@lawrence_ch/eslint-config-win':
       configs.push(
-        '@winner-fed/eslint-config-win',
-        '@winner-fed/eslint-config-win/vue',
+        '@lawrence_ch/eslint-config-win',
+        '@lawrence_ch/eslint-config-win/vue',
       );
       Object.assign(pkg.devDependencies, {
-        '@winner-fed/eslint-config-win': '^1.0.2'
+        '@lawrence_ch/eslint-config-win': '^1.0.2'
       });
       break;
     case '@vue/eslint-config-airbnb':

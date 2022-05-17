@@ -3,5 +3,5 @@ module.exports = {
   env: {
     es6: true
   },
-  extends: ['@winner-fed/win']
+  extends: ['@lawrence_ch/win']
 };

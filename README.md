@@ -1,4 +1,4 @@
-# @winner-fed/vue-cli-plugin-eslint
+# @lawrence_chvue-cli-plugin-eslint
 
 > ESLint plugin for vue-cli
 
@@ -33,12 +33,12 @@ module.exports = {
 ## Installing in an already created project
 
 ``` sh
-npm install -D @winner-fed/vue-cli-plugin-eslint
-vue invoke @winner-fed/vue-cli-plugin-eslint
+npm install -D @lawrence_ch/vue-cli-plugin-eslint
+vue invoke @lawrence_ch/vue-cli-plugin-eslint
 ```
 
 > There is also a shorthand to invoke the plugin  
-> `vue invoke @winner-fed/eslint`  
+> `vue invoke @lawrence_ch/eslint`  
 
 ## Injected webpack-chain rules
 
