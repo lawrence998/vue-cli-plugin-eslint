@@ -3,6 +3,7 @@ const optionsForApi = require ('./eslintOptions');
 
 module.exports = (api, option) => {
   const { lintOnSave } = option;
+  const { pluginOptions: { cliLintRules } } = option;
 
   if (lintOnSave) {
     const allWarnings = lintOnSave === true || lintOnSave === 'warining';
@@ -22,7 +23,7 @@ module.exports = (api, option) => {
           .options (Object.assign (options, {
             emitWarning: allWarnings,
             emitError: allErrors
-          }));
+          }, cliLintRules));
         /* eslint-enable indent */
       });
   }
